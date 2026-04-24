@@ -1,0 +1,39 @@
+v1 to v28 variables where important bank variables 
+but the company has dopne pca to hide the names and important values in those columns 
+Problem: These are CONFIDENTIAL!
+
+The bank can't share customer names, card numbers, merchant details
+Privacy laws (GDPR in Europe) prevent sharing this data
+
+Solution: Use PCA (Principal Component Analysis) to transform the data!
+
+
+PCA in Technical Terms
+What PCA Does:
+Step 1: Takes all original features (let's say 50+ features)
+Step 2: Finds the most important combinations of these features
+Step 3: Creates new features (V1, V2, V3...) that are combinations of the original ones
+Example (Simplified):
+Let's say original features were:
+- Transaction_Amount
+- Distance_from_Home  
+- Hour_of_Day
+- Merchant_Type
+PCA might create:
+V1 = 0.5 × Transaction_Amount + 0.3 × Distance_from_Home - 0.2 × Hour_of_Day + 0.1 × Merchant_Type
+
+V2 = -0.2 × Transaction_Amount + 0.6 × Distance_from_Home + 0.4 × Hour_of_Day - 0.3 × Merchant_Type
+
+V3 = 0.1 × Transaction_Amount - 0.1 × Distance_from_Home + 0.7 × Hour_of_Day + 0.5 × Merchant_Type
+
+Key Point: V1-V28 are weighted combinations of the original features!
+
+If you only train and test, you might "overfit" - memorize the training data instead of learning patterns
+Validation set helps you choose the best model without touching the test set
+Test set gives you the TRUE performance on unseen data
+
+
+What is SMOTE?
+
+An algorithm that creates synthetic (fake but realistic) examples of the minority class by interpolating
+ between existing minority examples.
